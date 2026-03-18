@@ -1,16 +1,19 @@
 import type { Metadata } from 'next'
-import { Inter, Playfair_Display } from 'next/font/google'
+import { Inter, Poppins } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
+import { Header } from '@/components/header'
+import { Footer } from '@/components/footer'
 
 const inter = Inter({ 
   subsets: ["latin"],
   variable: '--font-inter'
 });
 
-const playfair = Playfair_Display({ 
+const poppins = Poppins({ 
   subsets: ["latin"],
-  variable: '--font-playfair'
+  weight: ["400", "500", "600", "700", "800"],
+  variable: '--font-poppins'
 });
 
 export const metadata: Metadata = {
@@ -43,8 +46,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
-        {children}
+      <body className={`${inter.variable} ${poppins.variable} font-sans antialiased`}>
+        <Header />
+        <main className="min-h-screen">{children}</main>
+        <Footer />
         <Analytics />
       </body>
     </html>

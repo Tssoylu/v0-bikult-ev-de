@@ -1,22 +1,155 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import Link from "next/link"
-import { Menu, X, Phone, Mail } from "lucide-react"
+import { usePathname } from "next/navigation"
+import { Menu, X, Phone, Mail, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import { BiKultLogo } from "@/components/bikult-logo"
+
+type NavItem = {
+  name: string
+  href: string
+  children?: { name: string; href: string }[]
+}
+
+function DropdownItem({ item }: { item: NavItem }) {
+  const [open, setOpen] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+  const hideTimeout = useRef<NodeJS.Timeout | null>(null)
+  const pathname = usePathname()
+  const isActive = pathname === item.href || pathname.startsWith(item.href + "/")
+
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false)
+    }
+    document.addEventListener("mousedown", handleClick)
+    return () => {
+      document.removeEventListener("mousedown", handleClick)
+      if (hideTimeout.current) {
+        clearTimeout(hideTimeout.current)
+        hideTimeout.current = null
+      }
+    }
+  }, [])
+
+  const handleOpen = () => {
+    if (hideTimeout.current) {
+      clearTimeout(hideTimeout.current)
+      hideTimeout.current = null
+    }
+    setOpen(true)
+  }
+
+  const handleClose = () => {
+    if (hideTimeout.current) clearTimeout(hideTimeout.current)
+    hideTimeout.current = setTimeout(() => setOpen(false), 150)
+  }
+
+  if (!item.children) {
+    return (
+      <Link
+        href={item.href}
+        className={cn(
+          "text-sm font-medium transition-colors",
+          isActive ? "text-primary" : "text-foreground/80 hover:text-primary"
+        )}
+      >
+        {item.name}
+      </Link>
+    )
+  }
+
+  return (
+    <div ref={ref} className="relative" onMouseEnter={handleOpen} onMouseLeave={handleClose}>
+      <button
+        className={cn(
+          "flex items-center gap-1 text-sm font-medium transition-colors",
+          isActive ? "text-primary" : "text-foreground/80 hover:text-primary"
+        )}
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+      >
+        {item.name}
+        <ChevronDown className={cn("h-4 w-4 transition-transform", open && "rotate-180")} />
+      </button>
+      <div
+        className={cn(
+          "absolute top-full left-0 mt-2 w-56 rounded-xl border border-border bg-card shadow-lg overflow-hidden transition-all duration-200",
+          open ? "opacity-100 pointer-events-auto translate-y-0" : "opacity-0 pointer-events-none -translate-y-2"
+        )}
+      >
+        <div className="py-2">
+          <Link
+            href={item.href}
+            className="block px-4 py-2 text-sm font-medium text-foreground hover:bg-muted hover:text-primary transition-colors"
+            onClick={() => setOpen(false)}
+          >
+            {item.name} Übersicht
+          </Link>
+          <div className="my-1 border-t border-border" />
+          {item.children!.map((child) => (
+            <Link
+              key={child.href}
+              href={child.href}
+              className={cn(
+                "block px-4 py-2 text-sm transition-colors",
+                pathname === child.href
+                  ? "text-primary font-medium bg-primary/5"
+                  : "text-foreground/80 hover:bg-muted hover:text-primary"
+              )}
+              onClick={() => setOpen(false)}
+            >
+              {child.name}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
 
 const navigation = [
-  { name: "Startseite", href: "#" },
-  { name: "Über Uns", href: "#about" },
-  { name: "Angebote", href: "#services" },
-  { name: "Projekte", href: "#projects" },
-  { name: "Galerie", href: "#gallery" },
-  { name: "Kontakt", href: "#contact" },
+  { name: "Startseite", href: "/" },
+  {
+    name: "Verein",
+    href: "/verein",
+    children: [
+      { name: "Aktivitäten", href: "/verein/aktivitaten" },
+      { name: "Foto Galerie", href: "/verein/foto-galerie" },
+    ],
+  },
+  {
+    name: "Angebote",
+    href: "/nachhilfe",
+    children: [
+      { name: "Lernförderung & Nachhilfe", href: "/nachhilfe" },
+      { name: "Sprachkurse", href: "/sprachkurse" },
+      { name: "Deutsch als Fremdsprache", href: "/sprachkurse/deutsch-als-fremdsprache" },
+    ],
+  },
+  {
+    name: "Projekte",
+    href: "/projekte",
+    children: [
+      { name: "AUF!leben", href: "/projekte/auf-leben" },
+      { name: "Deutsches Kinderhilfswerk", href: "/projekte/deutsches-kinderhilfswerk" },
+      { name: "MiA – Migrantinnen stark im Alltag", href: "/projekte/mia-frauen" },
+    ],
+  },
 ]
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null)
+  const pathname = usePathname()
+
+  useEffect(() => {
+    setMobileMenuOpen(false)
+    setMobileExpanded(null)
+  }, [pathname])
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
@@ -43,29 +176,17 @@ export function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 lg:w-12 lg:h-12 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-serif font-bold text-lg lg:text-xl">B</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-serif font-bold text-lg lg:text-xl text-foreground">BiKult</span>
-              <span className="text-xs text-muted-foreground -mt-1">Bildungs und Kulturzentrum e.V.</span>
-            </div>
+          <Link href="/">
+            <BiKultLogo />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-7">
             {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
-              >
-                {item.name}
-              </Link>
+              <DropdownItem key={item.href} item={item} />
             ))}
-            <Button asChild>
-              <Link href="#contact">Kontakt aufnehmen</Link>
+            <Button asChild size="sm">
+              <Link href="/kontakt">Kontakt aufnehmen</Link>
             </Button>
           </div>
 
@@ -74,13 +195,9 @@ export function Header() {
             type="button"
             className="lg:hidden p-2 text-foreground"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Menü öffnen"
           >
-            <span className="sr-only">Menü öffnen</span>
-            {mobileMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
+            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
@@ -88,23 +205,63 @@ export function Header() {
         <div
           className={cn(
             "lg:hidden overflow-hidden transition-all duration-300",
-            mobileMenuOpen ? "max-h-96 pb-4" : "max-h-0"
+            mobileMenuOpen ? "max-h-[500px] pb-4" : "max-h-0"
           )}
         >
-          <div className="flex flex-col gap-2 pt-2">
+          <div className="flex flex-col gap-1 pt-2 border-t border-border">
             {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="px-4 py-2 text-foreground/80 hover:text-primary hover:bg-muted rounded-lg transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
+              <div key={item.href}>
+                <div className="flex items-center justify-between">
+                  <Link
+                    href={item.href}
+                    className={cn(
+                      "flex-1 px-4 py-2.5 text-sm font-medium rounded-lg transition-colors",
+                      pathname === item.href || pathname.startsWith(item.href + "/")
+                        ? "text-primary bg-primary/5"
+                        : "text-foreground/80 hover:text-primary hover:bg-muted"
+                    )}
+                  >
+                    {item.name}
+                  </Link>
+                  {item.children && (
+                    <button
+                      className="px-3 py-2.5 text-foreground/60 hover:text-primary"
+                      onClick={() => setMobileExpanded(mobileExpanded === item.href ? null : item.href)}
+                    >
+                      <ChevronDown
+                        className={cn(
+                          "h-4 w-4 transition-transform",
+                          mobileExpanded === item.href && "rotate-180"
+                        )}
+                      />
+                    </button>
+                  )}
+                </div>
+                {item.children && mobileExpanded === item.href && (
+                  <div className="ml-4 flex flex-col gap-1 mt-1">
+                    {item.children.map((child) => (
+                      <Link
+                        key={child.href}
+                        href={child.href}
+                        className={cn(
+                          "px-4 py-2 text-sm rounded-lg transition-colors",
+                          pathname === child.href
+                            ? "text-primary bg-primary/5 font-medium"
+                            : "text-foreground/70 hover:text-primary hover:bg-muted"
+                        )}
+                      >
+                        {child.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
-            <Button asChild className="mt-2">
-              <Link href="#contact">Kontakt aufnehmen</Link>
-            </Button>
+            <div className="px-4 pt-3">
+              <Button asChild className="w-full" size="sm">
+                <Link href="/kontakt">Kontakt aufnehmen</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </nav>

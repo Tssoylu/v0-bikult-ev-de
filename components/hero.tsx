@@ -33,13 +33,13 @@ export function Hero() {
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button size="lg" asChild className="group">
-                <Link href="#services">
+                <Link href="/nachhilfe">
                   Unsere Angebote
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <Link href="#contact">
+                <Link href="/kontakt">
                   Kontakt aufnehmen
                 </Link>
               </Button>
