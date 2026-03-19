@@ -12,10 +12,9 @@ export default function Home() {
       <Hero />
       <Services />
       <About />
-      <Projects />
 
       {/* YouTube Video */}
-      <section className="py-16 lg:py-24 bg-[#FAFAFA] text-foreground dark:bg-background">
+      <section className="py-16 lg:py-24 bg-[#F3F4F6] text-foreground dark:bg-muted/50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="font-serif text-2xl sm:text-3xl font-bold">
@@ -37,8 +36,10 @@ export default function Home() {
         </div>
       </section>
 
+      <Projects />
+
       {/* Contact CTA */}
-      <section className="py-20 lg:py-28 bg-[#F3F4F6] dark:bg-muted/50">
+      <section className="py-20 lg:py-28 bg-[#FAFAFA] dark:bg-background">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-primary font-medium text-sm uppercase tracking-wider">Kontakt</span>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mt-4">
