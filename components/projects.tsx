@@ -73,7 +73,7 @@ export function Projects() {
         <div className="mt-12 text-center">
           <Link
             href="/projekte"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-foreground/30 text-foreground hover:border-foreground hover:bg-foreground/5 font-medium transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 font-medium transition-colors shadow-sm"
           >
             Alle Projekte ansehen <ArrowUpRight className="h-4 w-4" />
           </Link>
