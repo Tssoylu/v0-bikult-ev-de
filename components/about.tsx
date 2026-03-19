@@ -25,7 +25,7 @@ const values = [
 
 export function About() {
   return (
-    <section id="about" className="py-20 lg:py-32 bg-[#F3F4F6] dark:bg-muted/50">
+    <section id="about" className="py-20 lg:py-32 bg-[#FAFAFA] dark:bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left Content */}
