@@ -82,14 +82,6 @@ function DropdownItem({ item }: { item: NavItem }) {
         )}
       >
         <div className="py-2">
-          <Link
-            href={item.href}
-            className="block px-4 py-2 text-sm font-medium text-foreground hover:bg-muted hover:text-primary transition-colors"
-            onClick={() => setOpen(false)}
-          >
-            {item.name} Übersicht
-          </Link>
-          <div className="my-1 border-t border-border" />
           {item.children!.map((child) => (
             <Link
               key={child.href}
