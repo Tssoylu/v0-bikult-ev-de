@@ -56,7 +56,7 @@ export default function Home() {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" asChild>
+            <Button size="lg" variant="ghost" className="border border-border" asChild>
               <a href="tel:023658878188" className="inline-flex items-center gap-2">
                 <Phone className="h-4 w-4" />
                 02365 8878188
