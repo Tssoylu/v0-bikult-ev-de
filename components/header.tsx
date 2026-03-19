@@ -117,28 +117,37 @@ const navigation = [
     name: "Verein",
     href: "/verein",
     children: [
+      { name: "Über Uns", href: "/verein/ueber-uns" },
+      { name: "Satzung", href: "/verein/satzung" },
       { name: "Aktivitäten", href: "/verein/aktivitaten" },
+      { name: "Kooperationen", href: "/verein/kooperationen" },
       { name: "Foto Galerie", href: "/verein/foto-galerie" },
-    ],
-  },
-  {
-    name: "Angebote",
-    href: "/nachhilfe",
-    children: [
-      { name: "Lernförderung & Nachhilfe", href: "/nachhilfe" },
-      { name: "Sprachkurse", href: "/sprachkurse" },
-      { name: "Deutsch als Fremdsprache", href: "/sprachkurse/deutsch-als-fremdsprache" },
+      { name: "Ehrenamt", href: "/verein/ehrenamt" },
+      { name: "Spenden", href: "/verein/spenden" },
     ],
   },
   {
     name: "Projekte",
     href: "/projekte",
     children: [
-      { name: "AUF!leben", href: "/projekte/auf-leben" },
       { name: "Deutsches Kinderhilfswerk", href: "/projekte/deutsches-kinderhilfswerk" },
-      { name: "MiA – Migrantinnen stark im Alltag", href: "/projekte/mia-frauen" },
+      { name: "AUF!leben", href: "/projekte/auf-leben" },
+      { name: "MiA-Frauen", href: "/projekte/mia-frauen" },
+      { name: "MiA-Männer", href: "/projekte/mia-maenner" },
+      { name: "Komm-An NRW", href: "/projekte/komm-an-nrw" },
+      { name: "Zukunftpaket 2023", href: "/projekte/zukunftpaket-2023" },
     ],
   },
+  {
+    name: "Sprachkurse",
+    href: "/sprachkurse",
+    children: [
+      { name: "Deutsch als Fremdsprache", href: "/sprachkurse/deutsch-als-fremdsprache" },
+      { name: "Türkisch", href: "/sprachkurse/tuerkisch" },
+      { name: "Englisch", href: "/sprachkurse/englisch" },
+    ],
+  },
+  { name: "Nachhilfe", href: "/nachhilfe" },
 ]
 
 export function Header() {
