@@ -15,13 +15,13 @@ export default function Home() {
       <Projects />
 
       {/* YouTube Video */}
-      <section className="py-16 lg:py-24 bg-foreground text-background">
+      <section className="py-16 lg:py-24 bg-[#FAFAFA] text-foreground dark:bg-background">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="font-serif text-2xl sm:text-3xl font-bold">
               Jahresrückblick 2021/2022
             </h2>
-            <p className="text-background/60 mt-3">
+            <p className="text-muted-foreground mt-3">
               Ein Blick auf unsere Aktivitäten und Projekte des vergangenen Jahres.
             </p>
           </div>
@@ -38,7 +38,7 @@ export default function Home() {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-20 lg:py-28 bg-muted/50">
+      <section className="py-20 lg:py-28 bg-[#F3F4F6] dark:bg-muted/50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-primary font-medium text-sm uppercase tracking-wider">Kontakt</span>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mt-4">

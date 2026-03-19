@@ -27,7 +27,7 @@ const projects = [
 
 export function Projects() {
   return (
-    <section id="projects" className="py-20 lg:py-32 bg-foreground text-background">
+    <section id="projects" className="py-20 lg:py-32 bg-[#F3F4F6] text-foreground dark:bg-muted/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mb-16">
@@ -35,7 +35,7 @@ export function Projects() {
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 text-balance">
             Unsere aktuellen Projekte und Partnerschaften
           </h2>
-          <p className="text-background/70 mt-6 text-lg">
+          <p className="text-muted-foreground mt-6 text-lg">
             Wir arbeiten mit renommierten Partnern zusammen, um nachhaltige Bildungs- und Kulturprojekte zu realisieren.
           </p>
         </div>
@@ -46,7 +46,7 @@ export function Projects() {
             <Link
               key={project.title}
               href={project.href}
-              className="group relative overflow-hidden rounded-2xl bg-background/5 hover:bg-background/10 transition-colors block"
+              className="group relative overflow-hidden rounded-2xl bg-background shadow-sm border border-border hover:shadow-md transition-colors block"
             >
               <div className="aspect-[4/3] overflow-hidden">
                 <img 
@@ -63,7 +63,7 @@ export function Projects() {
                   {project.title}
                   <ArrowUpRight className="h-5 w-5 shrink-0 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all" />
                 </h3>
-                <p className="text-background/70 mt-2 text-sm">{project.description}</p>
+                <p className="text-foreground/70 mt-2 text-sm">{project.description}</p>
               </div>
             </Link>
           ))}
@@ -73,7 +73,7 @@ export function Projects() {
         <div className="mt-12 text-center">
           <Link
             href="/projekte"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-background/40 text-background hover:bg-background/10 font-medium transition-colors"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-border/40 text-foreground hover:shadow-md font-medium transition-colors"
           >
             Alle Projekte ansehen <ArrowUpRight className="h-4 w-4" />
           </Link>
