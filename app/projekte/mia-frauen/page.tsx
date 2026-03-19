@@ -83,7 +83,7 @@ export default function MiaFrauenPage() {
                 Was ist MiA?
               </span>
               <h2 className="text-3xl lg:text-4xl font-extrabold font-serif text-foreground mb-6">
-                Begegnungscafé für Frauen
+                Migrantinnen stärken – im Alltag und darüber hinaus
               </h2>
               <p className="text-muted-foreground mb-4 leading-relaxed">
                 MiA — <em>Migrantinnen einfach stark im Alltag</em> — ist ein Programm, das Frauen mit
