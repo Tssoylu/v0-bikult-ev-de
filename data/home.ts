@@ -1,1 +1,17 @@
-export const homeData = { hero: { title: 'Herzlich willkommen auf der Seite des Bildungs und Kulturzentrum e.V.', image: '/placeholder.jpg' }, services: [ { title: 'Lernförderung & Nachhilfe', link: '/nachhilfe' }, { title: 'Deutsch als Fremdsprache', link: '/sprachkurse/deutsch-als-fremdsprache' }, { title: 'Aktivitäten', link: '/verein/aktivitaten' }, { title: 'AUF!leben Zukunft ist jetzt.', link: '/projekte/auf-leben' }, { title: 'Deutsches Kinderhilfswerk', link: '/projekte/deutsches-kinderhilfswerk' }, { title: 'Foto Galerie', link: '/verein/foto-galerie' } ], video: { title: 'Der Jahresrückblick 2021 2022' } }
+export const homeData = {
+  hero: {
+    title: 'Herzlich willkommen auf der Seite des Bildungs und Kulturzentrum e.V.',
+    image: '/placeholder.jpg'
+  },
+  services: [
+    { title: 'LernfÃ¶rderung & Nachhilfe', link: '/nachhilfe' },
+    { title: 'Deutsch als Fremdsprache', link: '/sprachkurse/deutsch-als-fremdsprache' },
+    { title: 'AktivitÃ¤ten', link: '/verein/aktivitaten' },
+    { title: 'AUF!leben Zukunft ist jetzt.', link: '/projekte/auf-leben' },
+    { title: 'Deutsches Kinderhilfswerk', link: '/projekte/deutsches-kinderhilfswerk' },
+    { title: 'Foto Galerie', link: '/verein/foto-galerie' }
+  ],
+  video: {
+    title: 'Der JahresrÃ¼ckblick 2021 2022'
+  }
+}
