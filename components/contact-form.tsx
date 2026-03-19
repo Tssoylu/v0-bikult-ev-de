@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Send } from "lucide-react"
+import { Send, Loader2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -15,12 +15,42 @@ export function ContactForm() {
     message: "",
   })
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState("")
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Could be wired up to a form service like Formspree
-    setSubmitted(true)
-    setFormData({ name: "", email: "", phone: "", subject: "", message: "" })
+    setLoading(true)
+    setError("")
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
+          subject: `Kontaktanfrage: ${formData.subject}`,
+          from_name: formData.name,
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || "—",
+          message: formData.message,
+          botcheck: "",
+        }),
+      })
+
+      const data = await res.json()
+      if (data.success) {
+        setSubmitted(true)
+        setFormData({ name: "", email: "", phone: "", subject: "", message: "" })
+      } else {
+        setError("Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an info@bikult-ev.de.")
+      }
+    } catch {
+      setError("Es ist ein Fehler aufgetreten. Bitte prüfen Sie Ihre Internetverbindung.")
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -112,10 +142,17 @@ export function ContactForm() {
             </div>
           </div>
 
-          <Button type="submit" size="lg" className="w-full group mt-6">
-            <Send className="mr-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            Nachricht senden
+          <Button type="submit" size="lg" className="w-full group mt-6" disabled={loading}>
+            {loading ? (
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+            ) : (
+              <Send className="mr-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            )}
+            {loading ? "Wird gesendet…" : "Nachricht senden"}
           </Button>
+          {error && (
+            <p className="text-sm text-destructive mt-3 text-center">{error}</p>
+          )}
         </form>
       )}
     </div>
