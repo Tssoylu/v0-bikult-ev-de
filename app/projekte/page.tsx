@@ -27,6 +27,30 @@ const projects = [
     href: "/projekte/mia-frauen",
     status: "Laufendes Programm (2022+)",
   },
+  {
+    title: "MiA – Männer im Alltag",
+    description:
+      "BAMF-gefördertes Integrationsprogramm für Männer mit Einwanderungsgeschichte. BiKult e.V. bietet alltagspraktischen Deutschunterricht, Berufsberatung, Unterstützung bei Behördengängen sowie Workshops zu Familie und gesellschaftlicher Teilhabe.",
+    tags: ["Männer", "Integration", "BAMF-Förderung", "Sprachförderung"],
+    href: "/projekte/mia-maenner",
+    status: "Laufendes Programm (2022+)",
+  },
+  {
+    title: "Komm-An NRW",
+    description:
+      "Landesprogramm zur Förderung der gesellschaftlichen Teilhabe von Neuzugewanderten in Marl. BiKult e.V. als lokaler Träger vernetzt Neuzugewanderte mit Beratungs- und Unterstützungsangeboten und bietet muttersprachliche Beratung in mehreren Sprachen.",
+    tags: ["Neuzugewanderte", "Integration", "NRW-Förderung", "Beratung"],
+    href: "/projekte/komm-an-nrw",
+    status: "Laufendes Programm",
+  },
+  {
+    title: "Zukunftpaket 2023",
+    description:
+      "Bundesprogramm für Bewegung, Kultur und Gesundheit. BiKult e.V. ermöglichte Kindern und Jugendlichen in Marl Zugang zu vielfältigen Freizeitangeboten, Workshops und Aktivitäten zur Stärkung von Partizipation und Eigenverantwortung.",
+    tags: ["Kinder & Jugendliche", "Bundesprogramm", "Freizeit", "Kultur"],
+    href: "/projekte/zukunftpaket-2023",
+    status: "Abgeschlossen (2023)",
+  },
 ]
 
 export const metadata = {
@@ -46,7 +70,7 @@ export default function ProjektePage() {
 
       <section className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project) => (
               <Link
                 key={project.href}
@@ -88,6 +112,8 @@ export default function ProjektePage() {
                 "Deutsche Kinder- und Jugendstiftung (DKJS)",
                 "Deutsches Kinderhilfswerk",
                 "BAMF (Bundesamt für Migration und Flüchtlinge)",
+                "Ministerium für Kinder, Jugend und Familie NRW",
+                "Bundesministerium für Familie, Senioren, Frauen und Jugend",
                 "Verein für Internationale Jugendarbeit e.V. (VIJ)",
               ].map((partner) => (
                 <div
