@@ -1,21 +1,8 @@
-"use client"
-
-import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Heart, Play, Phone } from "lucide-react"
+import { ArrowRight, Play, Phone } from "lucide-react"
 import Link from "next/link"
 
 export function Hero() {
-  const [liked, setLiked] = useState(false)
-  const [hearts, setHearts] = useState<number[]>([])
-
-  const handleLike = () => {
-    setLiked((v) => !v)
-    const id = Date.now()
-    setHearts((prev) => [...prev, id])
-    setTimeout(() => setHearts((prev) => prev.filter((h) => h !== id)), 1200)
-  }
-
   return (
     <section className="relative min-h-screen flex items-center pt-32 pb-16 overflow-hidden">
       {/* Background Pattern */}
@@ -84,38 +71,7 @@ export function Hero() {
                 </span>
               </a>
 
-              {/* Heart button */}
-              <div className="relative flex items-center">
-                {hearts.map((id) => (
-                  <span
-                    key={id}
-                    className="absolute bottom-full right-0 text-xl pointer-events-none"
-                    style={{ animation: "floatUp 1.2s ease-out forwards" }}
-                  >
-                    ❤️
-                  </span>
-                ))}
-                <button
-                  onClick={handleLike}
-                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border hover:border-red-400 transition-all group/like"
-                  aria-label="Gefällt mir"
-                >
-                  <Heart
-                    className={`h-5 w-5 transition-all duration-300 ${
-                      liked
-                        ? "fill-red-500 text-red-500 scale-125"
-                        : "text-muted-foreground group-hover/like:text-red-400 group-hover/like:scale-110"
-                    }`}
-                  />
-                </button>
-              </div>
 
-              <style>{`
-                @keyframes floatUp {
-                  0%   { opacity: 1; transform: translateY(0) scale(1); }
-                  100% { opacity: 0; transform: translateY(-60px) scale(1.5); }
-                }
-              `}</style>
             </div>
           </div>
         </div>
