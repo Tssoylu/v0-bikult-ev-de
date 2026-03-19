@@ -156,7 +156,7 @@ export default function MiaFrauenPage() {
               Videobeitrag
             </span>
             <h2 className="text-3xl lg:text-4xl font-extrabold font-serif text-foreground">
-              BiKult e.V. – Jahresrückblick
+              Begegnungscafé für Frauen
             </h2>
           </div>
           <div className="aspect-video rounded-2xl overflow-hidden shadow-xl border border-border">
