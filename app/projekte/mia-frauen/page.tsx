@@ -186,7 +186,7 @@ export default function MiaFrauenPage() {
                 Jetzt Kontakt aufnehmen <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
               <Link href="/projekte">
                 Alle Projekte ansehen
               </Link>
