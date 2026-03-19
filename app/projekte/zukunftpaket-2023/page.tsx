@@ -12,12 +12,6 @@ const highlights = [
   "Lokale Umsetzung in Marl und Umgebung",
 ]
 
-const galleryImages = [
-  { src: "/projects/zukunftpaket-1.jpg", alt: "Sport- und Bewegungsangebote" },
-  { src: "/projects/zukunftpaket-2.jpg", alt: "Gemeinschaftliche Aktivitäten" },
-  { src: "/projects/zukunftpaket-3.jpg", alt: "Kreative Workshops für Kinder" },
-]
-
 export const metadata = {
   title: "Zukunftpaket 2023 – BiKult e.V.",
   description: "Das Zukunftpaket – Engagiert für Kinder und Jugendliche. BiKult e.V. als lokaler Träger in Marl.",
@@ -30,19 +24,6 @@ export default function ZukunftpaketPage() {
         title="Zukunftpaket 2023"
         subtitle="Engagiert für Kinder und Jugendliche — Chancen eröffnen, Potenziale entfalten."
       />
-
-      {/* Gallery */}
-      <section className="py-12 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {galleryImages.map((img) => (
-              <div key={img.src} className="aspect-[4/3] rounded-2xl overflow-hidden">
-                <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="py-20 lg:py-32">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">

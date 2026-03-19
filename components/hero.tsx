@@ -95,9 +95,8 @@ export function Hero() {
                   <div className="relative flex flex-col items-center gap-4 z-10">
                     <div className="relative">
                       {/* Pulsing rings */}
-                      <span className="absolute inset-0 rounded-full bg-white/20 animate-ping" />
-                      <span className="absolute inset-0 scale-125 rounded-full bg-white/10 animate-ping [animation-delay:300ms]" />
-                      <button className="relative w-20 h-20 bg-red-600 hover:bg-red-500 rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
+                      <span className="absolute inset-0 rounded-full bg-white/10 animate-ping [animation-duration:2s]" />
+                      <button className="relative w-20 h-20 bg-red-600/90 hover:bg-red-500 rounded-full flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-500">
                         <Play className="h-8 w-8 text-white fill-white ml-1" />
                       </button>
                     </div>
