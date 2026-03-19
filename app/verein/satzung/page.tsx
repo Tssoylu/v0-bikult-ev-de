@@ -9,7 +9,7 @@ export const metadata = {
 export default function Page() {
   return (
     <main>
-      <PageHero title={satzungData.title} description={satzungData.subtitle} />       
+      <PageHero title={satzungData.title} subtitle={satzungData.subtitle} />       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 space-y-8">
         <div className="bg-card border border-border shadow-sm rounded-2xl p-6 md:p-10 mb-8">
           <div className="space-y-12">

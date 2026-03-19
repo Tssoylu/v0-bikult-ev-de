@@ -37,10 +37,7 @@ export default function DeutschAlsFremdsprachePage() {
       <PageHero
         title="Deutsch als Fremdsprache"
         subtitle="Ihre Brücke zur deutschen Sprache und Kultur — herzlich willkommen bei BiKult e.V.!"
-        breadcrumbs={[
-          { label: "Sprachkurse", href: "/sprachkurse" },
-          { label: "Deutsch als Fremdsprache", href: "/sprachkurse/deutsch-als-fremdsprache" },
-        ]}
+        
       />
 
       <section className="py-20 lg:py-32">

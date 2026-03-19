@@ -9,7 +9,7 @@ export const metadata = {
 export default function UeberUnsPage() {
   return (
     <main>
-      <PageHero title={ueberUnsData.title} description={ueberUnsData.subtitle} />       
+      <PageHero title={ueberUnsData.title} subtitle={ueberUnsData.subtitle} />       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 space-y-12">
         <div className="prose prose-lg max-w-none text-muted-foreground prose-headings:font-semibold prose-headings:text-foreground">
           <p className="text-xl leading-relaxed text-foreground border-l-4 border-primary pl-6 mb-12">

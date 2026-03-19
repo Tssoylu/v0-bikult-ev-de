@@ -7,7 +7,7 @@ import { ExternalLink } from "lucide-react"
 export default function KooperationenPage() {
   return (
     <main>
-      <PageHero title={kooperationenData.title} description={kooperationenData.subtitle} />       
+      <PageHero title={kooperationenData.title} subtitle={kooperationenData.subtitle} />       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 space-y-12">
         <p className="text-xl leading-relaxed text-center text-muted-foreground max-w-3xl mx-auto">
           {kooperationenData.description}

@@ -11,7 +11,7 @@ export const metadata = {
 export default function SpendenPage() {
   return (
     <main>
-      <PageHero title={spendenData.title} description={spendenData.subtitle} />       
+      <PageHero title={spendenData.title} subtitle={spendenData.subtitle} />       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 space-y-12">
         <div className="text-center max-w-2xl mx-auto">
           <p className="text-xl text-muted-foreground leading-relaxed">

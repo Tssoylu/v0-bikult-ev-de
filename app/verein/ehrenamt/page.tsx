@@ -10,7 +10,7 @@ export const metadata = {
 export default function EhrenamtPage() {
   return (
     <main>
-      <PageHero title={ehrenamtData.title} description={ehrenamtData.subtitle} />       
+      <PageHero title={ehrenamtData.title} subtitle={ehrenamtData.subtitle} />       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 space-y-12">
         <div className="text-center max-w-2xl mx-auto">
           <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">

@@ -31,10 +31,7 @@ export default function DeutschesKinderhilfswerkPage() {
       <PageHero
         title="Deutsches Kinderhilfswerk"
         subtitle='Das Projekt „Gemeinsam Stark" des Bildungs- und Kulturzentrums BiKult e.V. in Marl — umgesetzt mit Unterstützung des Deutschen Kinderhilfswerks.'
-        breadcrumbs={[
-          { label: "Projekte", href: "/projekte" },
-          { label: "Deutsches Kinderhilfswerk", href: "/projekte/deutsches-kinderhilfswerk" },
-        ]}
+        
       />
 
       <section className="py-20 lg:py-32">

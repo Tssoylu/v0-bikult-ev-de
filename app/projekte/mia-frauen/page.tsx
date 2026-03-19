@@ -51,11 +51,7 @@ export default function MiaFrauenPage() {
       <PageHero
         title="MiA – Migrantinnen stark im Alltag"
         subtitle="Migrantinnen einfach stark im Alltag — ein BAMF-gefördertes Programm zur Stärkung und Integration von Frauen mit Einwanderungsgeschichte"
-        breadcrumbs={[
-          { name: "Startseite", href: "/" },
-          { name: "Projekte", href: "/projekte" },
-          { name: "MiA – Migrantinnen stark im Alltag", href: "/projekte/mia-frauen" },
-        ]}
+        
       />
 
       {/* Intro banner */}

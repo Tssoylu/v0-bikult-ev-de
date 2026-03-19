@@ -42,10 +42,7 @@ export default function AufLebenPage() {
       <PageHero
         title="AUF!leben – Zukunft ist jetzt"
         subtitle="Ein Programm der Deutschen Kinder- und Jugendstiftung zur Unterstützung von Kindern und Jugendlichen nach der Corona-Pandemie."
-        breadcrumbs={[
-          { label: "Projekte", href: "/projekte" },
-          { label: "AUF!leben", href: "/projekte/auf-leben" },
-        ]}
+        
       />
 
       <section className="py-20 lg:py-32">
