@@ -1,4 +1,3 @@
-Investigated Turbopack parsing build error.
-The error was caused by invalid UTF-8 encoding in \data/home.ts\ explicitly brought upon by PowerShell's string interpolation.
-Recreated the file using standard Node.js/UTF-8 and validated successful builds via \
-pm run build\.
+User pointed out that subpages like 'Satzung' are still empty.
+Goal: Scrape the content from bikult-ev.de (Verein pages) and populate them with real data formatted with Tailwind.
+Starting with Satzung and Über Uns.
