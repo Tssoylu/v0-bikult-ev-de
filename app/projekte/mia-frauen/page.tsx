@@ -150,27 +150,24 @@ export default function MiaFrauenPage() {
 
       {/* Video – MiA Kurse */}
       <section className="py-16 lg:py-24 bg-background">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">
-            Videobeitrag
-          </span>
-          <h2 className="text-3xl lg:text-4xl font-extrabold font-serif text-foreground mb-4">
-            MiA auf YouTube
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-            Schauen Sie sich unseren Videobeitrag zum MiA-Programm an und erfahren Sie mehr über die Arbeit und die Frauen, die daran teilnehmen.
-          </p>
-          <a
-            href="https://www.youtube.com/channel/UCFEhVp3Nf0rSPjYYzHYN1sw"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-colors"
-          >
-            <svg className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-            </svg>
-            Video auf YouTube ansehen
-          </a>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <span className="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">
+              Videobeitrag
+            </span>
+            <h2 className="text-3xl lg:text-4xl font-extrabold font-serif text-foreground">
+              BiKult e.V. – Jahresrückblick
+            </h2>
+          </div>
+          <div className="aspect-video rounded-2xl overflow-hidden shadow-xl border border-border">
+            <iframe
+              src="https://www.youtube.com/embed/ODCet76ZeOk?rel=0&modestbranding=1"
+              title="BiKult e.V. – Jahresrückblick"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            />
+          </div>
         </div>
       </section>
 

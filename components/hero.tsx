@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Heart, Play } from "lucide-react"
+import { ArrowRight, Heart, Play, Phone } from "lucide-react"
 import Link from "next/link"
 
 export function Hero() {
@@ -51,6 +51,7 @@ export function Hero() {
               </Button>
               <Button size="lg" variant="outline" asChild>
                 <Link href="/kontakt">
+                  <Phone className="mr-2 h-4 w-4" />
                   Kontakt aufnehmen
                 </Link>
               </Button>
