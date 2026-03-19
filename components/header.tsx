@@ -64,17 +64,22 @@ function DropdownItem({ item }: { item: NavItem }) {
 
   return (
     <div ref={ref} className="relative" onMouseEnter={handleOpen} onMouseLeave={handleClose}>
-      <button
+      <Link
+        href={item.href}
         className={cn(
           "flex items-center gap-1 text-sm font-medium transition-colors",
           isActive ? "text-primary" : "text-foreground/80 hover:text-primary"
         )}
-        onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
       >
         {item.name}
-        <ChevronDown className={cn("h-4 w-4 transition-transform", open && "rotate-180")} />
-      </button>
+        <span
+          className="p-0.5"
+          onClick={(e) => { e.preventDefault(); setOpen((v) => !v) }}
+        >
+          <ChevronDown className={cn("h-4 w-4 transition-transform", open && "rotate-180")} />
+        </span>
+      </Link>
       <div
         className={cn(
           "absolute top-full left-0 mt-2 w-56 rounded-xl border border-border bg-card shadow-lg overflow-hidden transition-all duration-200",

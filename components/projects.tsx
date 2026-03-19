@@ -1,23 +1,27 @@
 import { ArrowUpRight } from "lucide-react"
+import Link from "next/link"
 
 const projects = [
   {
-    title: "AUF!leben - Zukunft ist jetzt",
+    title: "AUF!leben – Zukunft ist jetzt",
     description: "Ein Programm zur Unterstützung junger Menschen bei der Bewältigung der Pandemiefolgen. Gefördert vom Bundesministerium für Familie, Senioren, Frauen und Jugend.",
-    image: "https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600&h=400&fit=crop",
-    tag: "Jugendförderung"
+    image: "/projects/auf-leben.jpg",
+    tag: "Jugendförderung",
+    href: "/projekte/auf-leben"
   },
   {
     title: "Deutsches Kinderhilfswerk",
     description: "Partnerschaft für Projekte zur Förderung von Kindern und Jugendlichen in Deutschland. Gemeinsam setzen wir uns für Chancengleichheit ein.",
-    image: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=400&fit=crop",
-    tag: "Partnerschaft"
+    image: "/projects/kinderhilfswerk.jpg",
+    tag: "Partnerschaft",
+    href: "/projekte/deutsches-kinderhilfswerk"
   },
   {
-    title: "Jahresrückblick 2021/2022",
-    description: "Ein Blick auf unsere erfolgreichen Projekte und Aktivitäten. Über 500 Teilnehmer haben von unseren Programmen profitiert.",
-    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&h=400&fit=crop",
-    tag: "Rückblick"
+    title: "Komm-AN NRW",
+    description: "Förderung gesellschaftlicher Teilhabe und zivilgesellschaftlichen Engagements in Nordrhein-Westfalen. Ein Unterstützungsangebot für Neuzugewanderte.",
+    image: "/projects/komm-an-nrw.jpg",
+    tag: "Integration",
+    href: "/projekte/komm-an-nrw"
   }
 ]
 
@@ -39,9 +43,10 @@ export function Projects() {
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {projects.map((project) => (
-            <article 
+            <Link
               key={project.title}
-              className="group relative overflow-hidden rounded-2xl bg-background/5 hover:bg-background/10 transition-colors"
+              href={project.href}
+              className="group relative overflow-hidden rounded-2xl bg-background/5 hover:bg-background/10 transition-colors block"
             >
               <div className="aspect-[4/3] overflow-hidden">
                 <img 
@@ -60,8 +65,18 @@ export function Projects() {
                 </h3>
                 <p className="text-background/70 mt-2 text-sm">{project.description}</p>
               </div>
-            </article>
+            </Link>
           ))}
+        </div>
+
+        {/* CTA */}
+        <div className="mt-12 text-center">
+          <Link
+            href="/projekte"
+            className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+          >
+            Alle Projekte ansehen <ArrowUpRight className="h-4 w-4" />
+          </Link>
         </div>
       </div>
     </section>

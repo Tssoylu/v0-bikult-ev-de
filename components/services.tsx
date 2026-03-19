@@ -76,14 +76,7 @@ export function Services() {
               <h3 className="font-serif text-xl font-semibold text-foreground">{service.title}</h3>
               <p className="text-muted-foreground mt-3">{service.description}</p>
               
-              <ul className="mt-6 space-y-2">
-                {service.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <span className="w-1.5 h-1.5 bg-primary rounded-full" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+
             </div>
           ))}
         </div>
