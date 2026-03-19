@@ -1,53 +1,5 @@
 import { PageHero } from "@/components/page-hero"
 
-const events = [
-  {
-    title: "Neujahrsempfang 2023",
-    description:
-      "Der BiKult e.V. organisierte ein Programm zum Neujahrsempfang 2023. Mit unseren G\u00e4sten und Mitgliedern waren wir 40 Personen. Der Verein und seine Aktivit\u00e4ten wurden vorgestellt. Es war ein harmonischer und sch\u00f6ner Abend mit k\u00f6stlichen Spezialit\u00e4ten aus der t\u00fcrkischen K\u00fcche. Anschlie\u00dfend berichteten drei unserer ehrenamtlichen Mitglieder, wie sie sich integriert haben. Dazu wurde live Musik mit der Instrument 'Saz' vorgespielt.",
-    category: "Vereinsfeier",
-  },
-  {
-    title: "Weihnachtsstimmung mit ukrainischen Kindern",
-    description:
-      "Eine Aktivit\u00e4t 'Pl\u00e4tzchen backen' mit ca. 12 ukrainischen Kindern in unserem Verein. Die Kinder rollten den Teig aus und stachen kreativ ihre Pl\u00e4tzchen aus. Anschlie\u00dfend wurde gemeinsam gegessen. Die Kinder hatten viel Spa\u00df und bekamen Geschenkt\u00fcten.",
-    category: "Kinderaktivität",
-  },
-  {
-    title: "Einblick in die MiA Kurse 2022",
-    description:
-      "MiA (Migrantinnen stark im Alltag) ist ein Angebot für Migrantinnen und geflüchtete Frauen. Die Kurse orientieren sich an den Lebenssituationen der Frauen und enthalten ein niedrigschwelliges Sprachförderangebot. Kinder wurden betreut, während ihre Mütter mehr über die deutsche Sprache lernten. Das Programm wurde vom Bundesamt für Migration und Flüchtlinge ermöglicht.",
-    category: "Sprachkurs",
-  },
-  {
-    title: "Begegnungscafé",
-    description:
-      "Das Interesse zum Begegnungscaf\u00e9 war sehr gro\u00df. Aus der t\u00fcrkischen K\u00fcche wurde 'Lahmacun' vorgestellt. Zum Essen kamen alle zusammen und konnten ausprobieren, wie es schmeckt. Es war eine harmonische und sch\u00f6ne Unterhaltung.",
-    category: "Interkulturelles Treffen",
-  },
-  {
-    title: "Tag der Bibliotheken",
-    description:
-      "Am 'Tag der Bibliotheken' besuchten die Kinder die Bücherei Marl 'Türmchen'. Sie schauten sich um und suchten Bücher aus, die sie interessierten und neugierig machten.",
-    category: "Bildungsausflug",
-  },
-  {
-    title: "Ebru-Workshop",
-    description:
-      "Zum Begegnungscafé empfingen wir unsere Gäste in der Feather College e.V. Das Thema war die 'Ebru Kunst' und wurde als Workshop durchgeführt. Die Teilnehmerinnen probierten selbst aus, wie die Farben auf dem Wasser tanzen, und konnten ihre Kreativität weiterentwickeln. Danach kamen alle zu 'Ci\u011f Köfte' zusammen und erlebten eine gemütliche Gesprächsrunde.",
-    category: "Kreativworkshop",
-  },
-]
-
-const categoryColors: Record<string, string> = {
-  Vereinsfeier: "bg-primary/10 text-primary",
-  Kinderaktivität: "bg-green-100 text-green-700",
-  Sprachkurs: "bg-accent/10 text-accent",
-  "Interkulturelles Treffen": "bg-purple-100 text-purple-700",
-  Bildungsausflug: "bg-blue-100 text-blue-700",
-  Kreativworkshop: "bg-orange-100 text-orange-700",
-}
-
 export const metadata = {
   title: "Aktivitäten – BiKult e.V.",
   description: "Einblicke in die Aktivitäten und Veranstaltungen des BiKult e.V. in Marl.",
@@ -66,25 +18,124 @@ export default function AktivitaetenPage() {
       />
 
       <section className="py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {events.map((event) => (
-              <article
-                key={event.title}
-                className="bg-card rounded-2xl p-6 border border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col"
-              >
-                <span
-                  className={`inline-block self-start px-3 py-1 rounded-full text-xs font-semibold mb-4 ${
-                    categoryColors[event.category] ?? "bg-muted text-muted-foreground"
-                  }`}
-                >
-                  {event.category}
-                </span>
-                <h3 className="font-serif text-lg font-semibold text-foreground mb-3">{event.title}</h3>
-                <p className="text-muted-foreground text-sm flex-1">{event.description}</p>
-              </article>
-            ))}
-          </div>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+
+          {/* Neujahrsempfang 2023 */}
+          <article>
+            <div className="aspect-video rounded-2xl overflow-hidden shadow-xl mb-8">
+              <iframe
+                src="https://www.youtube.com/embed/lzIBbcArAqc?rel=0&modestbranding=1"
+                title="Neujahrsempfang 2023 – BiKult e.V."
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+            <h2 className="font-serif text-3xl font-bold text-primary mb-4">Neujahrsempfang 2023</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Der BiKult e.V. hatte gestern ein Programm zum Neujahrsempfang 2023 organisiert. Mit unseren Gästen und
+              Mitgliedern waren wir 40 Personen. Der Verein und ihre Aktivitäten wurden vorgestellt. Es war ein harmonischer und
+              schöner Abend. Mit köstlichen Spezialitäten aus der türkischen Küche konnten wir uns mit unseren Gästen
+              austauschen. Anschließend haben 3 unsere ehrenamtlichen Mitglieder erzählt, wie sie sich integriert haben und
+              jetzt mit einem Beruf angefangen haben zu arbeiten. Dazu wurde noch live Musik mit der Instrument "Saz"
+              vorgespielt. Die Lieder waren Herz berührend. Hiermit bedanken wir uns an allen und für das tolle Engagement.
+            </p>
+          </article>
+
+          {/* Weihnachtsstimmung */}
+          <article>
+            <div className="grid lg:grid-cols-2 gap-10 items-start">
+              <div>
+                <h2 className="font-serif text-3xl font-bold text-primary mb-4">Weihnachtsstimmung mit ukrainischen Kindern</h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  Heute fand eine Aktivität "Plätzchen backen" mit ca. 12 ukrainischen Kindern in unserem Verein statt.
+                  Die Kinder haben den Teig ausgerollt und kreativ ihre Plätzchen ausgestochen. Anschließend haben wir
+                  es zusammen gegessen mit anderen Knabberzeugen. Es war eine weihnachtliche Stimmung. Zum Schluß haben
+                  die Kinder Geschenktüten bekommen. Sie hatten sehr viel Spaß und Freude an der Aktivität.
+                </p>
+              </div>
+              <div className="grid grid-cols-2 gap-2">
+                {["/aktivitaten/weihnacht-a.jpg", "/aktivitaten/weihnacht-b.jpg", "/aktivitaten/weihnacht-c.jpg", "/aktivitaten/weihnacht-d.jpg"].map((src, i) => (
+                  <div key={i} className="overflow-hidden rounded-xl aspect-square bg-muted">
+                    <img src={src} alt={`Weihnachtsaktivität ${i + 1}`} className="w-full h-full object-cover" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </article>
+
+          {/* MiA Kurse */}
+          <article>
+            <div className="overflow-hidden rounded-2xl shadow-lg mb-8">
+              <img src="/aktivitaten/mia-kurs.jpg" alt="MiA Kurse 2022" className="w-full object-cover" />
+            </div>
+            <h2 className="font-serif text-3xl font-bold text-primary mb-4">Einblick in die MiA Kurse 2022</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              MiA (Migrantinnen stark im Alltag) ist ein Angebot für Migrantinnen und geflüchtete Frauen. Die Kurse
+              orientieren sich in besonderem Maße an die Lebenssituationen der Frauen und enthalten ein
+              niederschwelliges Sprachförderangebot. Ziel ist es, Frauen zu unterstützen, Potenziale zu entdecken,
+              die deutsche Sprache zu entfalten und Selbstbewusstsein der Frauen zu stärken. Dabei werden neue
+              Bekanntschaften und Zugänge den Angeboten ermöglicht. Kinder wurden betreut, während ihre Mütter mehr
+              über die deutsche Sprache lernten. Wir durften tolle Frauen kennenlernen. Vielen Dank an die einzelnen
+              Teilnehmer! Das Programm wurde vom Bundesamt für Migration und Flüchtlinge ermöglicht. Ein großes
+              Dankeschön an @bamf_bund und dem Verein für Internationale Jugendarbeit e.V. (VIJ)!
+            </p>
+          </article>
+
+          {/* Begegnungscafé */}
+          <article>
+            <div className="overflow-hidden rounded-2xl shadow-lg mb-8">
+              <img src="/aktivitaten/begegnung-dinner.jpg" alt="Begegnungscafé" className="w-full object-cover" />
+            </div>
+            <h2 className="font-serif text-3xl font-bold text-primary mb-4">Begegnungscafé</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Die Interesse zum Begegnungscafe war heute sehr groß. Aus der türkischen Küche wurde das "Lahmacun"
+              vorgestellt. Zum Essen sind wir alle zusammen gekommen uns sie konnten es ausprobieren wie es schmeckt.
+              Es war eine harmonische und schöne Unterhaltung.
+            </p>
+          </article>
+
+          {/* Tag der Bibliotheken */}
+          <article>
+            <div className="grid lg:grid-cols-2 gap-10 items-center">
+              <div className="overflow-hidden rounded-2xl shadow-lg">
+                <img src="/aktivitaten/bibliothek-main.jpg" alt="Tag der Bibliotheken" className="w-full object-cover" />
+              </div>
+              <div>
+                <h2 className="font-serif text-3xl font-bold text-primary mb-4">Tag der Bibliotheken</h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  Am "Tag der Bibliotheken" waren die Kinder in der Bücherei Marl "Türmchen". Sie haben sich umgeschaut
+                  und ihre Bücher ausgesucht, für sie interessant und neugierig waren.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          {/* Ebru-Workshop */}
+          <article>
+            <div className="grid lg:grid-cols-2 gap-10 items-start">
+              <div>
+                <h2 className="font-serif text-3xl font-bold text-primary mb-4">Ebru-Workshop</h2>
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  Zum Begegnungscafe haben wir unsere Gäste in der feather college e.V. empfangen. Das Thema war die
+                  "Ebru Kunst" und haben es als Workshop durchgeführt. Die Teilnehmerinnen haben es selbst ausprobiert
+                  wie die Farben auf dem Wasser tanzen und sie könnten ihre Kreativität weiter entwickeln. Danach sind
+                  wir zum "Çiğ Köfte" essen zusammen gekommen und haben eine gemütliche Gesprächsrunde erlebt.
+                </p>
+              </div>
+              <div className="overflow-hidden rounded-2xl shadow-lg">
+                <img src="/aktivitaten/ebru-main.jpg" alt="Ebru-Workshop Hauptbild" className="w-full object-cover" />
+              </div>
+            </div>
+            <div className="grid grid-cols-3 gap-3 mt-4">
+              {["/aktivitaten/ebru-2.jpg", "/aktivitaten/ebru-3.jpg", "/aktivitaten/ebru-extra.jpg"].map((src, i) => (
+                <div key={i} className="overflow-hidden rounded-xl aspect-video bg-muted">
+                  <img src={src} alt={`Ebru-Workshop ${i + 2}`} className="w-full h-full object-cover" />
+                </div>
+              ))}
+            </div>
+          </article>
+
         </div>
       </section>
     </>
