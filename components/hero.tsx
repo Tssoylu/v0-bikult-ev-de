@@ -68,57 +68,29 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right Content - YouTube Video Card */}
+          {/* Right Content - YouTube Play Button */}
           <div className="hidden lg:flex items-center justify-center">
-            <div className="relative w-full max-w-lg">
-              {/* Card */}
+            <div className="relative flex flex-col items-center gap-6">
               <a
-                href="https://www.youtube.com/channel/UCFEhVp3Nf0rSPjYYzHYN1sw"
+                href="https://www.youtube.com/watch?v=ODCet76ZeOk"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group block relative rounded-3xl overflow-hidden shadow-2xl"
+                className="group relative block"
+                aria-label="Jahresrückblick auf YouTube ansehen"
               >
-                {/* Thumbnail background */}
-                <div className="aspect-video bg-gradient-to-br from-gray-900 via-red-950 to-gray-900 flex items-center justify-center relative overflow-hidden">
-                  {/* Decorative blobs */}
-                  <div className="absolute top-6 left-8 w-32 h-32 bg-red-600/20 rounded-full blur-3xl" />
-                  <div className="absolute bottom-4 right-6 w-24 h-24 bg-primary/20 rounded-full blur-2xl" />
-
-                  {/* Title overlay at top */}
-                  <div className="absolute top-0 inset-x-0 p-5 flex items-start justify-between">
-                    <span className="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                      YouTube
-                    </span>
-                    <span className="text-white/60 text-xs">BiKult e.V.</span>
-                  </div>
-
-                  {/* Center: Play button */}
-                  <div className="relative flex flex-col items-center gap-4 z-10">
-                    <div className="relative">
-                      {/* Pulsing rings */}
-                      <span className="absolute inset-0 rounded-full bg-white/10 animate-ping [animation-duration:2s]" />
-                      <button className="relative w-20 h-20 bg-red-600/90 hover:bg-red-500 rounded-full flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-500">
-                        <Play className="h-8 w-8 text-white fill-white ml-1" />
-                      </button>
-                    </div>
-                    <p className="text-white font-semibold text-sm text-center px-4">
-                      Jahresrückblick 2021 / 2022
-                    </p>
-                  </div>
-
-                  {/* Bottom label */}
-                  <div className="absolute bottom-4 inset-x-5 flex items-center justify-between">
-                    <span className="text-white/50 text-xs">Jetzt auf YouTube ansehen →</span>
-                  </div>
-                </div>
+                <span className="absolute inset-0 rounded-full bg-red-500/20 animate-ping [animation-duration:2s]" />
+                <span className="flex w-28 h-28 bg-red-600 hover:bg-red-500 rounded-full items-center justify-center shadow-xl group-hover:scale-105 transition-transform duration-500">
+                  <Play className="h-10 w-10 text-white fill-white ml-1" />
+                </span>
               </a>
+              <p className="text-sm text-muted-foreground">Jahresrückblick 2021 / 2022</p>
 
-              {/* Heart button below card */}
-              <div className="relative mt-4 flex items-center justify-end pr-2">
+              {/* Heart button */}
+              <div className="relative flex items-center">
                 {hearts.map((id) => (
                   <span
                     key={id}
-                    className="absolute bottom-full right-4 text-red-500 text-xl pointer-events-none animate-[floatUp_1.2s_ease-out_forwards]"
+                    className="absolute bottom-full right-0 text-xl pointer-events-none"
                     style={{ animation: "floatUp 1.2s ease-out forwards" }}
                   >
                     ❤️
@@ -142,7 +114,6 @@ export function Hero() {
                 </button>
               </div>
 
-              {/* CSS for float-up animation */}
               <style>{`
                 @keyframes floatUp {
                   0%   { opacity: 1; transform: translateY(0) scale(1); }

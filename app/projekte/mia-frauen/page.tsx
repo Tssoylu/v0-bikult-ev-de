@@ -161,8 +161,8 @@ export default function MiaFrauenPage() {
           </div>
           <div className="aspect-video rounded-2xl overflow-hidden shadow-xl border border-border">
             <iframe
-              src="https://www.youtube.com/embed/ODCet76ZeOk?rel=0&modestbranding=1"
-              title="BiKult e.V. – Jahresrückblick"
+              src="https://www.youtube.com/embed/JjFr914YRU0?rel=0&modestbranding=1"
+              title="BiKult e.V. – MiA Frauen"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="w-full h-full"
