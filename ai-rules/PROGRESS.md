@@ -1,4 +1,4 @@
-# Progress � Bikult Redesign
+﻿# Progress ï¿½ Bikult Redesign
 _Last updated: March 19, 2026_
 
 ## Done ?
@@ -21,6 +21,7 @@ _Last updated: March 19, 2026_
 - Tailwind CSS (not CSS modules)
 - App Router (not Pages Router)
 - Content in /content as TS constants
+
 
 
 
