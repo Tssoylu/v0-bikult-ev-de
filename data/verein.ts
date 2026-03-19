@@ -35,13 +35,25 @@ export const spendenData = {
 export const kooperationenData = {
   title: 'Kooperationen & Partner',
   subtitle: 'Gemeinsam mehr erreichen',
-  description: 'Das Bildungs und Kulturzentrum e.V. arbeitet mit zahlreichen lokalen, regionalen und nationalen Partnern zusammen, um ein vielfältiges Angebot bereitzustellen. Dank unserer starken Netzwerke können wir Projekte wie z.B. „AUF!leben“ oder Initiativen des Deutschen Kinderhilfswerks erfolgreich in Marl umsetzen.',
+  description: 'Das Bildungs und Kulturzentrum e.V. arbeitet mit zahlreichen lokalen, regionalen und nationalen Partnern zusammen, um ein vielfältiges Angebot bereitzustellen. Dank unserer starken Netzwerke können wir Projekte erfolgreich in Marl umsetzen.',
   partners: [
-    { name: 'Deutsches Kinderhilfswerk', type: 'Förderprojekt' },
-    { name: 'AUF!leben', type: 'Zukunft ist jetzt.' },
-    { name: 'Komm-An NRW', type: 'Integrationsförderung' },
-    { name: 'MiA – Migrantinnen stark im Alltag', type: 'Frauenprojekt' },
-    { name: 'Das Zukunftspaket', type: 'Für Bewegung, Kultur und Gesundheit' }
+    { name: 'Ministerium für Schule und Bildung des Landes Nordrhein-Westfalen', type: 'Landesministerium' },
+    { name: 'Ministerium für Kinder, Jugend, Familie, Gleichstellung, Flucht und Integration', type: 'Landesministerium' },
+    { name: 'Bundesministerium für Bildung und Forschung', type: 'Bundesministerium' },
+    { name: 'Bundesamt für Migration und Flüchtlinge (BAMF)', type: 'Bundesamt' },
+    { name: 'Bundesagentur für Arbeit', type: 'Bundesagentur' },
+    { name: 'Kreis Recklinghausen', type: 'Kreis' },
+    { name: 'Kommunales Integrationszentrum Kreis Recklinghausen (KI)', type: 'Integration' },
+    { name: 'Stadt Marl', type: 'Stadt' },
+    { name: 'Das Zukunftspaket', type: 'Förderprojekt' },
+    { name: 'Komm-An NRW', type: 'Förderprojekt' },
+    { name: 'AUF!leben – Zukunft ist jetzt', type: 'Förderprojekt' },
+    { name: 'VEZ.NRW', type: 'Verband' },
+    { name: 'Lotus Bildungszentrum e.V.', type: 'Bildungspartner' },
+    { name: 'Bochumer Bildungszentrum e.V. (BBZ)', type: 'Bildungspartner' },
+    { name: 'Pangea Mathematik Wettbewerb', type: 'Bildungspartner' },
+    { name: 'WeBiKul', type: 'Bildungspartner' },
+    { name: 'Deutsches Kinderhilfswerk', type: 'Förderprojekt' }
   ]
 };
 
