@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, BookOpen, Users, Globe } from "lucide-react"
 import Link from "next/link"
 
 export function Hero() {
@@ -56,17 +56,34 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right Content - Hero image / decorative */}
-          <div className="hidden lg:flex items-center justify-center">
-            <div className="relative w-full max-w-lg aspect-square">
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/20 to-accent/20" />
-              <div className="absolute inset-6 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
-                <div className="text-center px-8">
-                  <div className="font-serif text-6xl font-bold text-primary/30 leading-none">BiKult</div>
-                  <div className="mt-4 text-muted-foreground text-sm">Bildungs und Kulturzentrum e.V.</div>
-                  <div className="mt-2 text-muted-foreground text-sm">45772 Marl</div>
+          {/* Right Content - Bento Grid */}
+          <div className="hidden lg:grid grid-cols-2 gap-4 lg:gap-6">
+            <div className="col-span-2 bg-card rounded-2xl p-6 lg:p-8 shadow-sm border border-border hover:shadow-md transition-shadow">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
+                  <BookOpen className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-serif font-semibold text-lg text-foreground">Lernförderung & Nachhilfe</h3>
+                  <p className="text-muted-foreground mt-1 text-sm">Individuelle Unterstützung für schulischen Erfolg in allen Fächern</p>
                 </div>
               </div>
+            </div>
+
+            <div className="bg-card rounded-2xl p-6 shadow-sm border border-border hover:shadow-md transition-shadow">
+              <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+                <Globe className="h-6 w-6 text-accent" />
+              </div>
+              <h3 className="font-serif font-semibold text-foreground">Deutsch als Fremdsprache</h3>
+              <p className="text-muted-foreground mt-2 text-sm">Sprachkurse für alle Niveaus</p>
+            </div>
+
+            <div className="bg-card rounded-2xl p-6 shadow-sm border border-border hover:shadow-md transition-shadow">
+              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                <Users className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="font-serif font-semibold text-foreground">Kulturelle Aktivitäten</h3>
+              <p className="text-muted-foreground mt-2 text-sm">Veranstaltungen und Projekte</p>
             </div>
           </div>
         </div>
