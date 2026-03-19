@@ -28,6 +28,11 @@ const values = [
 
 const subpages = [
   {
+    title: "Über Uns",
+    description: "Erfahren Sie mehr über Geschichte, Mission und Werte des BiKult e.V.",
+    href: "/verein/ueber-uns",
+  },
+  {
     title: "Aktivitäten",
     description: "Entdecken Sie unsere vielfältigen kulturellen Veranstaltungen und Aktivitäten.",
     href: "/verein/aktivitaten",
@@ -36,6 +41,21 @@ const subpages = [
     title: "Foto Galerie",
     description: "Eindrücke aus unserem Vereinsleben in Bildern.",
     href: "/verein/foto-galerie",
+  },
+  {
+    title: "Ehrenamt",
+    description: "Werden Sie Teil unserer ehrenamtlichen Gemeinschaft und gestalten Sie etwas Gutes.",
+    href: "/verein/ehrenamt",
+  },
+  {
+    title: "Kooperationen",
+    description: "Unsere Partner und Kooperationen auf lokaler und überregionaler Ebene.",
+    href: "/verein/kooperationen",
+  },
+  {
+    title: "Spenden",
+    description: "Unterstützen Sie unsere Arbeit mit einer Spende und machen Sie einen Unterschied.",
+    href: "/verein/spenden",
   },
 ]
 
@@ -49,7 +69,7 @@ export default function VereinPage() {
     <>
       <PageHero
         title="Unser Verein"
-        subtitle="Das Bildungs und Kulturzentrum e.V. (BiKult) wurde gegründet, um Menschen in Marl und Umgebung bei ihrer persönlichen und beruflichen Entwicklung zu unterstützen."
+        subtitle="Das Bildungs- und Kulturzentrum e.V. (BiKult) wurde gegründet, um Menschen in Marl und Umgebung bei ihrer persönlichen und beruflichen Entwicklung zu unterstützen."
         breadcrumbs={[{ label: "Verein", href: "/verein" }]}
       />
 
@@ -64,7 +84,7 @@ export default function VereinPage() {
               </h2>
               <div className="mt-6 space-y-4 text-muted-foreground">
                 <p className="text-lg">
-                  Das Bildungs und Kulturzentrum e.V. (BiKult) wurde gegründet, um Menschen in Marl
+                  Das Bildungs- und Kulturzentrum e.V. (BiKult) wurde gegründet, um Menschen in Marl
                   und Umgebung bei ihrer persönlichen und beruflichen Entwicklung zu unterstützen.
                 </p>
                 <p>

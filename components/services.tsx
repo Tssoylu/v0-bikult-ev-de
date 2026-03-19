@@ -84,7 +84,7 @@ export function Services() {
         {/* CTA */}
         <div className="text-center mt-12">
           <Button size="lg" asChild>
-            <Link href="#contact">Jetzt anfragen</Link>
+            <Link href="/kontakt">Jetzt anfragen</Link>
           </Button>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { PageHero } from "@/components/page-hero"
+import { LightboxGallery, SingleLightboxImage } from "@/components/lightbox"
 
 export const metadata = {
   title: "Aktivitäten – BiKult e.V.",
@@ -54,20 +55,23 @@ export default function AktivitaetenPage() {
                   die Kinder Geschenktüten bekommen. Sie hatten sehr viel Spaß und Freude an der Aktivität.
                 </p>
               </div>
-              <div className="grid grid-cols-2 gap-2">
-                {["/aktivitaten/weihnacht-a.jpg", "/aktivitaten/weihnacht-b.jpg", "/aktivitaten/weihnacht-c.jpg", "/aktivitaten/weihnacht-d.jpg"].map((src, i) => (
-                  <div key={i} className="overflow-hidden rounded-xl aspect-square bg-muted">
-                    <img src={src} alt={`Weihnachtsaktivität ${i + 1}`} className="w-full h-full object-cover" />
-                  </div>
-                ))}
-              </div>
+              <LightboxGallery
+                className="grid grid-cols-2 gap-2"
+                itemClassName="rounded-xl aspect-square bg-muted"
+                images={[
+                  { src: "/aktivitaten/weihnacht-a.jpg", alt: "Weihnachtsaktivität 1" },
+                  { src: "/aktivitaten/weihnacht-b.jpg", alt: "Weihnachtsaktivität 2" },
+                  { src: "/aktivitaten/weihnacht-c.jpg", alt: "Weihnachtsaktivität 3" },
+                  { src: "/aktivitaten/weihnacht-d.jpg", alt: "Weihnachtsaktivität 4" },
+                ]}
+              />
             </div>
           </article>
 
           {/* MiA Kurse */}
           <article>
             <div className="overflow-hidden rounded-2xl shadow-lg mb-8">
-              <img src="/aktivitaten/mia-kurs.jpg" alt="MiA Kurse 2022" className="w-full object-cover" />
+              <SingleLightboxImage src="/aktivitaten/mia-kurs.jpg" alt="MiA Kurse 2022" imgClassName="w-full object-cover" />
             </div>
             <h2 className="font-serif text-3xl font-bold text-primary mb-4">Einblick in die MiA Kurse 2022</h2>
             <p className="text-muted-foreground leading-relaxed">
@@ -85,7 +89,7 @@ export default function AktivitaetenPage() {
           {/* Begegnungscafé */}
           <article>
             <div className="overflow-hidden rounded-2xl shadow-lg mb-8">
-              <img src="/aktivitaten/begegnung-dinner.jpg" alt="Begegnungscafé" className="w-full object-cover" />
+              <SingleLightboxImage src="/aktivitaten/begegnung-dinner.jpg" alt="Begegnungscafé" imgClassName="w-full object-cover" />
             </div>
             <h2 className="font-serif text-3xl font-bold text-primary mb-4">Begegnungscafé</h2>
             <p className="text-muted-foreground leading-relaxed">
@@ -99,7 +103,7 @@ export default function AktivitaetenPage() {
           <article>
             <div className="grid lg:grid-cols-2 gap-10 items-center">
               <div className="overflow-hidden rounded-2xl shadow-lg">
-                <img src="/aktivitaten/bibliothek-main.jpg" alt="Tag der Bibliotheken" className="w-full object-cover" />
+                <SingleLightboxImage src="/aktivitaten/bibliothek-main.jpg" alt="Tag der Bibliotheken" imgClassName="w-full object-cover" />
               </div>
               <div>
                 <h2 className="font-serif text-3xl font-bold text-primary mb-4">Tag der Bibliotheken</h2>
@@ -124,16 +128,18 @@ export default function AktivitaetenPage() {
                 </p>
               </div>
               <div className="overflow-hidden rounded-2xl shadow-lg">
-                <img src="/aktivitaten/ebru-main.jpg" alt="Ebru-Workshop Hauptbild" className="w-full object-cover" />
+                <SingleLightboxImage src="/aktivitaten/ebru-main.jpg" alt="Ebru-Workshop Hauptbild" imgClassName="w-full object-cover" />
               </div>
             </div>
-            <div className="grid grid-cols-3 gap-3 mt-4">
-              {["/aktivitaten/ebru-2.jpg", "/aktivitaten/ebru-3.jpg", "/aktivitaten/ebru-extra.jpg"].map((src, i) => (
-                <div key={i} className="overflow-hidden rounded-xl aspect-video bg-muted">
-                  <img src={src} alt={`Ebru-Workshop ${i + 2}`} className="w-full h-full object-cover" />
-                </div>
-              ))}
-            </div>
+            <LightboxGallery
+              className="grid grid-cols-3 gap-3 mt-4"
+              itemClassName="rounded-xl aspect-video bg-muted"
+              images={[
+                { src: "/aktivitaten/ebru-2.jpg", alt: "Ebru-Workshop 2" },
+                { src: "/aktivitaten/ebru-3.jpg", alt: "Ebru-Workshop 3" },
+                { src: "/aktivitaten/ebru-extra.jpg", alt: "Ebru-Workshop 4" },
+              ]}
+            />
           </article>
 
         </div>

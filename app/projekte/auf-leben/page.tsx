@@ -8,7 +8,7 @@ const goals = [
   "Förderung sozialer Teilhabe und gemeinschaftlicher Erlebnisse",
   "Stärkung des Integrationsprozesses für geflüchtete Kinder",
   "Finanzielle Förderung lokaler Träger durch den Zukunftsfonds der DKJS",
-  "Vernetzung von lok alen und überregionalen Trägern",
+  "Vernetzung von lokalen und überregionalen Trägern",
 ]
 
 const timeline = [

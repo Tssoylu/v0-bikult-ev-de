@@ -5,8 +5,11 @@ import { BiKultLogoDark } from "@/components/bikult-logo"
 const navigation = {
   verein: [
     { name: "Verein Übersicht", href: "/verein" },
+    { name: "Über Uns", href: "/verein/ueber-uns" },
     { name: "Aktivitäten", href: "/verein/aktivitaten" },
     { name: "Foto Galerie", href: "/verein/foto-galerie" },
+    { name: "Ehrenamt", href: "/verein/ehrenamt" },
+    { name: "Spenden", href: "/verein/spenden" },
   ],
   angebote: [
     { name: "Lernförderung & Nachhilfe", href: "/nachhilfe" },

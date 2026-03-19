@@ -38,7 +38,7 @@ export default function EhrenamtPage() {
             {ehrenamtData.callToAction}
           </p>
           <a
-            href="mailto:info@bikult-ev.de"
+            href="/kontakt"
             className="inline-flex items-center justify-center px-8 py-3 rounded-md bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
           >
             Jetzt mitmachen
