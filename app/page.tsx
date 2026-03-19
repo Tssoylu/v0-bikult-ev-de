@@ -3,7 +3,7 @@ import { Services } from "@/components/services"
 import { About } from "@/components/about"
 import { Projects } from "@/components/projects"
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function Home() {
@@ -55,7 +55,10 @@ export default function Home() {
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <a href="tel:023658878188">02365 8878188</a>
+              <a href="tel:023658878188" className="inline-flex items-center gap-2">
+                <Phone className="h-4 w-4" />
+                02365 8878188
+              </a>
             </Button>
           </div>
         </div>
