@@ -72,18 +72,17 @@ export function Hero() {
           <div className="hidden lg:flex items-center justify-center">
             <div className="relative flex flex-col items-center gap-6">
               <a
-                href="https://www.youtube.com/watch?v=ODCet76ZeOk"
+                href="https://www.youtube.com/channel/UCFEhVp3Nf0rSPjYYzHYN1sw"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative block"
-                aria-label="Jahresrückblick auf YouTube ansehen"
+                aria-label="BiKult e.V. YouTube Kanal"
               >
                 <span className="absolute inset-0 rounded-full bg-red-500/20 animate-ping [animation-duration:2s]" />
                 <span className="flex w-28 h-28 bg-red-600 hover:bg-red-500 rounded-full items-center justify-center shadow-xl group-hover:scale-105 transition-transform duration-500">
                   <Play className="h-10 w-10 text-white fill-white ml-1" />
                 </span>
               </a>
-              <p className="text-sm text-muted-foreground">Jahresrückblick 2021 / 2022</p>
 
               {/* Heart button */}
               <div className="relative flex items-center">
@@ -108,9 +107,6 @@ export function Hero() {
                         : "text-muted-foreground group-hover/like:text-red-400 group-hover/like:scale-110"
                     }`}
                   />
-                  <span className="text-sm text-muted-foreground">
-                    {liked ? "Gefällt mir!" : "Gefällt mir"}
-                  </span>
                 </button>
               </div>
 
