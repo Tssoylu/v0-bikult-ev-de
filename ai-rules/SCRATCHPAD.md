@@ -1,1 +1,2 @@
-﻿User uploaded an image showing logos for \"Kooperationen\". Need to update data/verein.ts with these exact names.
+﻿User requested to add website links and logos to the Kooperationen section.
+Need to update data/verein.ts and the component layout in app/verein/kooperationen/page.tsx to support images.
