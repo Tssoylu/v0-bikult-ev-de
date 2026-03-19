@@ -39,7 +39,7 @@ export default function Home() {
       <Projects />
 
       {/* Contact CTA */}
-      <section className="py-20 lg:py-28 bg-[#FAFAFA] dark:bg-background">
+      <section className="py-20 lg:py-28 bg-[#F3F4F6] dark:bg-muted/50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-primary font-medium text-sm uppercase tracking-wider">Kontakt</span>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mt-4">
