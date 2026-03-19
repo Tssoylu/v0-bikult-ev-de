@@ -1,3 +1,5 @@
-User pointed out that subpages like 'Satzung' are still empty.
-Goal: Scrape the content from bikult-ev.de (Verein pages) and populate them with real data formatted with Tailwind.
-Starting with Satzung and Über Uns.
+Updated Satzung page specifically as per user complaint.
+Fetched full contents from real bikult-ev.de.
+Separated data logic into \data/satzung.ts\.
+Displayed content cleanly using UI classes like \g-card\, \shadow-sm\, \order\ and mapped dynamically.
+Will proceed with 'Über Uns' and 'Spenden' respectively.
