@@ -1,35 +1,40 @@
-# v0-bikult-ev-de
+# Bikult e.V. — Website
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
+Bu proje, [Bikult e.V.](https://bikult-ev.de) derneğinin resmi websitesinin modern bir yeniden yapılandırmasıdır. [Next.js](https://nextjs.org) ile geliştirilmiştir.
 
-## Built with v0
+## Proje Hakkında
 
-This repository is linked to a [v0](https://v0.app) project. You can continue developing by visiting the link below -- start new chats to make changes, and v0 will push commits directly to this repo. Every merge to `main` will automatically deploy.
+Bikult e.V. derneğinin websitesi; dernek hakkında bilgi, projeler, aktiviteler, fotoğraf galerisi, iletişim ve daha fazlasını içermektedir.
 
-[Continue working on v0 →](https://v0.app/chat/projects/prj_4Gei80inB7Zu2dTc6qJN8cDENmvr)
+**Sayfalar:**
+- Ana Sayfa
+- Projeler (MiA Frauen, Kinderhilfswerk, Zukunftpaket ve diğerleri)
+- Aktivitäten
+- Foto-Galerie
+- Verein (Über Uns, Satzung, Spenden, Kooperationen, Ehrenamt)
+- Mediathek
+- İletişim (Web3Forms entegrasyonu)
+- Impressum & Datenschutz
 
-## Getting Started
+## Teknolojiler
 
-First, run the development server:
+- [Next.js](https://nextjs.org) — React framework
+- [Tailwind CSS](https://tailwindcss.com) — Styling
+- [TypeScript](https://www.typescriptlang.org) — Type safety
+- [Web3Forms](https://web3forms.com) — İletişim formu
 
-```bash
+## Kurulum
+
+\`\`\`bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+\`\`\`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Tarayıcıda [http://localhost:3000](http://localhost:3000) adresini aç.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build
 
-## Learn More
-
-To learn more, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [v0 Documentation](https://v0.app/docs) - learn about v0 and how to use it.
-
-<a href="https://v0.app/chat/api/kiro/clone/codementalde/v0-bikult-ev-de" alt="Open in Kiro"><img src="https://pdgvvgmkdvyeydso.public.blob.vercel-storage.com/open%20in%20kiro.svg?sanitize=true" /></a>
+\`\`\`bash
+npm run build
+npm start
+\`\`\`
